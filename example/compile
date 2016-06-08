@@ -1,0 +1,20 @@
+#! /bin/sh
+
+BOOST_LIBADD="$HOME/boost/lib/libboost_log.so \
+              $HOME/boost/lib/libboost_log_setup.so \
+	      $HOME/boost/lib/libboost_program_options.so \
+	      $HOME/boost/lib/libboost_regex.so \
+	      $HOME/boost/lib/libboost_filesystem.so \
+	      $HOME/boost/lib/libboost_thread.so \
+	      $HOME/boost/lib/libboost_system.so"
+
+MYSQLPP_LIBADD="/usr/lib/libmysqlpp.so \
+		/usr/lib/x86_64-linux-gnu/libmysqlclient_r.so"
+
+TXOPTIX_LIBADD="$HOME/txsched/lib/libTxOptimizer.so \
+		$HOME/txsched/lib/libHxLsGrgAdaptor.so \
+		$HOME/txsched/lib/libHxNumerix.so \
+		$HOME/txsched/lib/libHxLsGRG.so"
+
+g++ -I../include demo.cc -o demo `pwd`/../lib/liboe.so $BOOST_LIBADD $MYSQLPP_LIBADD $TXOPTIX_LIBADD
+

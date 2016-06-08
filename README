@@ -1,0 +1,26 @@
+
+====== oe ======
+1. verify the lib
+  a. step in the bin directory
+   > cd bin
+  b. set the env LD_LIBRARY_PATH, mainly for the 3rd lib boost and mysql++
+   > source env.sh
+  c. edit the config file
+   > vi oe.cfg
+  d. execute the test
+   > ./oeTest
+  
+2. how to use the api interface
+   a. step in example directory
+    > cd example
+   b. refere the demo.cc file
+    > cat demo.cc
+   c. compile the demoe program
+    > ./compile
+   d. set the env
+    > source env.sh
+   e. edit the config file
+    > vi oe.cfg
+   f. execute the demo
+    > ./demo
+
